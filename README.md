@@ -1,4 +1,4 @@
-# Beijing Air Quality — Time‑Series Analysis
+# Beijing Air Quality : Time‑Series Analysis
 
 A five‑notebook project for exploring and forecasting Beijing multi‑site air quality (focus: **PM2.5**) with meteorological covariates. Run the notebooks **top‑to‑bottom in the order shown** for a clean, reproducible workflow.
 
@@ -42,13 +42,11 @@ statsmodels
 pmdarima
 scikit-learn
 missingno
-prophet==1.1.5    # optional; pin if you use it
-```
-> If Prophet installation is troublesome, skip it; the core flow relies on statsmodels.
+
 
 ## 🧭 Notebook roles & expected outputs
 
-### 01 — `Time_series_data_analysis.ipynb` (EDA)
+### 01 : `Time_series_data_analysis.ipynb` (EDA)
 **What it does**
 - Load & harmonize multi‑site data; parse timestamps; unify units.
 - Basic cleaning (duplicates, outliers), station normalization.
@@ -56,30 +54,27 @@ prophet==1.1.5    # optional; pin if you use it
 - Correlations: PM2.5 vs weather (TEMP, DEWP, PRES, RAIN, WSPM, wd).
 
 
-### 02 — `Missing_Value_Handling.ipynb`
+### 02 : `Missing_Value_Handling.ipynb`
 **What it does**
 - Create a continuous **DatetimeIndex** at hourly cadence; align sensors/sites.
 - Imputation strategies: forward/back fill within short windows, linear/time interpolation; optional seasonal Kalman/LOCF comparisons.
 - Leakage checks and imputation quality diagnostics.
 
 
-### 03 — `Time_Series_Stationality_Test.ipynb`
+### 03 : `Time_Series_Stationality_Test.ipynb`
 **What it does**
 - Stationarity tests: **ADF**, **KPSS** (trend/level).
 - Transformations: log(1+PM2.5), Yeo–Johnson (handles zeros/negatives).
 - Differencing: regular and seasonal; order suggestion via ACF/PACF.
 - Changepoint checks (optional).
 
-### 04 — `Time_Series_Decompose.ipynb`
+### 04 : `Time_Series_Decompose.ipynb`
 **What it does**
 - **STL** seasonal‑trend decomposition (e.g., 24‑hour, weekly).
 - Seasonal strength & remainder diagnostics; seasonality stability across years.
 - Site‑wise comparisons of seasonal components.
 
-**Saves**
-- STL component plots with confidence ribbons → `results/figures/stl_*`
-
-### 05 — `Advanced_data_analysis.ipynb`
+### 05 :`Advanced_data_analysis.ipynb`
 **What it does**
 - Baselines: naïve, seasonal naïve, moving average.
 - **ARIMA/SARIMA** (univariate PM2.5) and **SARIMAX/ARIMAX** with exogenous weather features.
