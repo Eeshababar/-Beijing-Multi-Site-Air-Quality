@@ -55,9 +55,6 @@ prophet==1.1.5    # optional; pin if you use it
 - Visuals: missingness overview, distributions, site comparisons, trends.
 - Correlations: PM2.5 vs weather (TEMP, DEWP, PRES, RAIN, WSPM, wd).
 
-**Saves**
-- `results/eda/` figures (hist/box/violin; monthly/DOW/Hour profiles; correlation heatmap).
-- Short EDA summary of drivers and seasonality hints.
 
 ### 02 — `Missing_Value_Handling.ipynb`
 **What it does**
@@ -65,9 +62,6 @@ prophet==1.1.5    # optional; pin if you use it
 - Imputation strategies: forward/back fill within short windows, linear/time interpolation; optional seasonal Kalman/LOCF comparisons.
 - Leakage checks and imputation quality diagnostics.
 
-**Saves**
-- `data/processed/` imputed datasets.
-- `results/eda/missingness_*.png` and imputation comparison plots.
 
 ### 03 — `Time_Series_Stationality_Test.ipynb`
 **What it does**
@@ -75,9 +69,6 @@ prophet==1.1.5    # optional; pin if you use it
 - Transformations: log(1+PM2.5), Yeo–Johnson (handles zeros/negatives).
 - Differencing: regular and seasonal; order suggestion via ACF/PACF.
 - Changepoint checks (optional).
-
-**Saves**
-- ACF/PACF plots, test tables → `results/figures/`
 
 ### 04 — `Time_Series_Decompose.ipynb`
 **What it does**
@@ -95,10 +86,6 @@ prophet==1.1.5    # optional; pin if you use it
 - Time‑series cross‑validation (expanding/rolling windows), hyper‑parameter search (p,d,q)(P,D,Q)\_m.
 - Residual diagnostics (Ljung–Box, remaining seasonality), forecast intervals.
 - Optional: Prophet/TBATS or a small LSTM demo (for short horizon).
-
-**Saves**
-- `results/models/metrics_*.csv`, `forecasts_*.csv`
-- Forecast vs actual plots with 80/95% PIs → `results/figures/`
 
 ## 🗂️ Data expectations
 
@@ -118,14 +105,6 @@ df = (pd.read_csv('data/Beijing_AirQuality.csv')
         .set_index('ts').sort_index())
 df = df.asfreq('H')  # enforce hourly grid
 ```
-
-## ✅ Repro checklist
-
-- [ ] EDA figures saved to `results/eda/`
-- [ ] Imputed dataset in `data/processed/`
-- [ ] Stationarity & STL diagnostics in `results/figures/`
-- [ ] Model metrics table comparing baselines vs SARIMA/SARIMAX
-- [ ] Final forecast plots & CSVs for selected horizons (e.g., 24h, 72h, 168h)
 
 ## 📈 Recommended figures for reports/slides
 - Missingness heatmap (`missingno`)
