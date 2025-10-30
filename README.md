@@ -73,7 +73,7 @@ missingno
 - Seasonal strength & remainder diagnostics; seasonality stability across years.
 - Site‑wise comparisons of seasonal components.
 
-### 05 :`Advanced_data_analysis.ipynb`
+### 05 :`Time-series modeling`.ipynb`
 **What it does**
 - AR, ARIMA, SARIMA for PM2.5 Prediction
 
