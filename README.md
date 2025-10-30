@@ -10,10 +10,9 @@ A five‑notebook project for exploring and forecasting Beijing multi‑site air
 ├── notebooks/
 │   ├── Time_series_data_analysis.ipynb        # 01 — EDA: loading, cleaning, visuals, quick insights
 │   ├── Missing_Value_Handling.ipynb           # 02 — Gaps: alignment & imputation strategy
-│   ├── Time_Series_Stationality_Test.ipynb    # 03 — (Stationarity) tests, transforms, differencing
+│   ├── Time_Series_Stationality_Test.ipynb    # 03 — (Stationarity) tests
 │   ├── Time_Series_Decompose.ipynb            # 04 — STL/seasonal-trend decomposition & diagnostics
-│   └── Advanced_data_analysis.ipynb           # 05 — Modeling & forecasts (ARIMA/SARIMAX, etc.)
-├── results/                        # Saved figures, metrics, forecasts
+│   └── Time-series modeling. ipynb            # 05 — Modeling & forecasts (AR/ARIMA/SARIMA, etc.)
 ├── requirements.txt
 └── README.md
 ```
@@ -76,11 +75,7 @@ missingno
 
 ### 05 :`Advanced_data_analysis.ipynb`
 **What it does**
-- Baselines: naïve, seasonal naïve, moving average.
-- **ARIMA/SARIMA** (univariate PM2.5) and **SARIMAX/ARIMAX** with exogenous weather features.
-- Time‑series cross‑validation (expanding/rolling windows), hyper‑parameter search (p,d,q)(P,D,Q)\_m.
-- Residual diagnostics (Ljung–Box, remaining seasonality), forecast intervals.
-- Optional: Prophet/TBATS or a small LSTM demo (for short horizon).
+- AR, ARIMA, SARIMA for PM2.5 Prediction
 
 ## 🗂️ Data expectations
 
