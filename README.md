@@ -12,7 +12,7 @@ A five‑notebook project for exploring and forecasting Beijing multi‑site air
 │   ├── Missing_Value_Handling.ipynb           # 02 — Gaps: alignment & imputation strategy
 │   ├── Time_Series_Stationality_Test.ipynb    # 03 — (Stationarity) tests
 │   ├── Time_Series_Decompose.ipynb            # 04 — STL/seasonal-trend decomposition & diagnostics
-│   └── Time-series modeling. ipynb            # 05 — Modeling & forecasts (AR/ARIMA/SARIMA, etc.)
+│   └── Time-series modeling forecast. ipynb            # 05 — Modeling & forecasts (AR/ARIMA/SARIMA, etc.)
 ├── requirements.txt
 └── README.md
 ```
